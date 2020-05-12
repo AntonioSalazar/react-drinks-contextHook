@@ -1,9 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+//context
 import { CategoriesContext } from '../context/ContextCategories';
 
-const Form = () => {
 
+
+const Form = () => {
+    //Context
     const { categories } = useContext(CategoriesContext);
+
+    //Local state
+    const [ userSelection, setUserSelection ] = useState({
+        ingredient: '',
+        category: ''
+    });
+
+    //save selected values in local state
+    const saveSelectedValues = (e) => {
+        setUserSelection({
+            ...userSelection,
+            [e.target.name] : e.target.value
+        })
+
+        console.log(userSelection);
+    }
 
     return ( 
         <form className='col-12 form'>
@@ -15,17 +34,26 @@ const Form = () => {
                             type="text"
                             name='ingredient'
                             placeholder='search by its ingredients'
-                            // onChange={e => setIngredients(e.target.value)}
+                            onChange={saveSelectedValues}
                         />
                     </div>
                     <div className="col-sm-12 col-md-4">
                         <select 
                             className='form__inputs-select'
                             name="category" 
-
+                            onChange={saveSelectedValues}
                         >
                             <option value="">--Select a category--</option>
-
+                            {
+                                categories.map(category => (
+                                    <option 
+                                        key={category.strCategory}
+                                        value={category.strCategory}
+                                    >
+                                        {category.strCategory}
+                                    </option>
+                                ))
+                            }
                         </select>
                     </div>
 
