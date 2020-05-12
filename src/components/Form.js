@@ -1,18 +1,22 @@
 import React, { useContext, useState } from 'react';
 //context
 import { CategoriesContext } from '../context/ContextCategories';
-
+import { RecipeContext } from '../context/RecipeContext';
 
 
 const Form = () => {
     //Context
     const { categories } = useContext(CategoriesContext);
+    const { setSearchRecipe } = useContext(RecipeContext);
+    
 
     //Local state
     const [ userSelection, setUserSelection ] = useState({
         ingredient: '',
         category: ''
     });
+    
+    
 
     //save selected values in local state
     const saveSelectedValues = (e) => {
@@ -20,12 +24,15 @@ const Form = () => {
             ...userSelection,
             [e.target.name] : e.target.value
         })
-
-        console.log(userSelection);
     }
 
+
+
     return ( 
-        <form className='col-12 form'>
+        <form className='col-12 form' onSubmit={e => {
+            e.preventDefault();
+            setSearchRecipe(userSelection)
+        }}>
             <fieldset>
                 <h3 className='form__title'>Search a drink by category or by it's ingredients</h3>
                 <div className="row form__inputs ">

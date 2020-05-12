@@ -5,22 +5,26 @@ import Header from './components/Header';
 import Form from './components/Form';
 
 //Context API
-import CategoriesProvider from './context/ContextCategories'
+import CategoriesProvider from './context/ContextCategories';
+import RecipeProvider from './context/RecipeContext';
 
 function App() {
   return (
     <CategoriesProvider>
+      <RecipeProvider>
       <Header/>
 
-      <main className='main container'>
-        <section className="row">
-          <Form/>
-        </section>
-      </main>
+        <main className='main container'>
+          <section className="row">
+            <Form/>
+          </section>
+        </main>
 
-      <footer>
+        <footer>
+          
+        </footer>  
         
-      </footer>      
+      </RecipeProvider>    
     </CategoriesProvider>
 
   );
