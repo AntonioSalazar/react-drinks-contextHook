@@ -49,3 +49,13 @@ body {
       width: 70%; }
       .form__inputs input[type='submit']:hover {
         transform: scale(1.1); }
+
+.recipeList {
+  background: #ffcccc; }
+  .recipeList__title {
+    text-align: center;
+    padding: 20px 0; }
+  .recipeList__card {
+    margin-bottom: 20px; }
+    .recipeList__card img {
+      width: 100%; }

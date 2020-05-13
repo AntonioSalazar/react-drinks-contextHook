@@ -3,6 +3,7 @@ import React, { Fragment } from 'react';
 //Compoents
 import Header from './components/Header';
 import Form from './components/Form';
+import RecipesList from './components/RecipesList';
 
 //Context API
 import CategoriesProvider from './context/ContextCategories';
@@ -18,12 +19,14 @@ function App() {
           <section className="row">
             <Form/>
           </section>
+          <RecipesList />
+   
         </main>
 
         <footer>
           
         </footer>  
-        
+
       </RecipeProvider>    
     </CategoriesProvider>
 

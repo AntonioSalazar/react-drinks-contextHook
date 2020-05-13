@@ -1,0 +1,15 @@
+.recipeList{
+    background: #ffcccc;
+
+    &__title{
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    &__card {
+        margin-bottom: 20px;
+        & img{
+            width: 100%;
+        }
+    }
+}

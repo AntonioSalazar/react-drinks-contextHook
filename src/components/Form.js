@@ -7,7 +7,7 @@ import { RecipeContext } from '../context/RecipeContext';
 const Form = () => {
     //Context
     const { categories } = useContext(CategoriesContext);
-    const { setSearchRecipe } = useContext(RecipeContext);
+    const { setSearchRecipe, setRequest } = useContext(RecipeContext);
     
 
     //Local state
@@ -32,6 +32,7 @@ const Form = () => {
         <form className='col-12 form' onSubmit={e => {
             e.preventDefault();
             setSearchRecipe(userSelection)
+            setRequest(true)
         }}>
             <fieldset>
                 <h3 className='form__title'>Search a drink by category or by it's ingredients</h3>
