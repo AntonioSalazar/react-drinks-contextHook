@@ -5,7 +5,7 @@ This project uses react Context for state management,
 
 You can enter an ingredient and then select a drink category
 
-API used:https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list
+API used:https://www.thecocktaildb.com
 
 This project makes 3 API call's, one to get the categories from the drop down menu, the second one to display the drink accordint to what the user selected and the third one to show the details of each drink
 
