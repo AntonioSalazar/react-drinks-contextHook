@@ -24,4 +24,4 @@ Home
 ![](public/imgs/details.png)
 
 
-Made with :heartpulse: y :raising_hand:
+Made with :heartpulse: by :raising_hand:
