@@ -51,7 +51,8 @@ body {
         transform: scale(1.1); }
 
 .recipeList {
-  background: #ffcccc; }
+  background: #ffcccc;
+  margin-bottom: 20px; }
   .recipeList__title {
     text-align: center;
     padding: 20px 0; }
@@ -59,3 +60,17 @@ body {
     margin-bottom: 20px; }
     .recipeList__card img {
       width: 100%; }
+    .recipeList__card-title {
+      text-align: center; }
+    .recipeList__card-btn {
+      display: inline-block;
+      padding: 10px;
+      margin-top: 10px;
+      border-style: none;
+      background: #E93340;
+      color: #fff;
+      border-radius: 3px;
+      transition: all .3s ease;
+      width: 100%; }
+      .recipeList__card-btn:hover {
+        transform: scale(1.1); }

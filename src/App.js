@@ -8,11 +8,13 @@ import RecipesList from './components/RecipesList';
 //Context API
 import CategoriesProvider from './context/ContextCategories';
 import RecipeProvider from './context/RecipeContext';
+import ModalWindowProvider from './context/ModalContext';
 
 function App() {
   return (
     <CategoriesProvider>
       <RecipeProvider>
+        <ModalWindowProvider>
       <Header/>
 
         <main className='main container'>
@@ -26,7 +28,7 @@ function App() {
         <footer>
           
         </footer>  
-
+        </ModalWindowProvider>
       </RecipeProvider>    
     </CategoriesProvider>
 
