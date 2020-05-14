@@ -22,3 +22,6 @@ Home
 ![](public/imgs/results.png)
 
 ![](public/imgs/details.png)
+
+
+Made with :heartpulse: y :raising_hand:
