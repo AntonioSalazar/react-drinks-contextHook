@@ -13,4 +13,12 @@ Deployed in netlify https://adoring-poincare-1c1da9.netlify.app/
 
 How the project looks like:
 
+Home
   ![](public/imgs/home.png)
+  
+  
+![](public/imgs/selection.png)
+
+![](public/imgs/results.png)
+
+![](public/imgs/details.png)
